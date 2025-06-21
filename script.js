@@ -1,8 +1,17 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
-}
 
-// Please do not change the code below
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(indexOfIgnoreCase(s1, s2));
+
+
+
+ function indexOfIgnoreCase(str, subStr) {
+      if (subStr === "") return 0;
+      if (str === "") return -1;
+      return str.toLowerCase().indexOf(subStr.toLowerCase());
+    }
+
+    // Prompt the user for input
+    const str = prompt("Enter the main string:");
+    const subStr = prompt("Enter the substring to search:");
+
+    // Call the function and show result
+    const result = indexOfIgnoreCase(str, subStr);
+    alert("Index of first occurrence (case-insensitive): " + result);
