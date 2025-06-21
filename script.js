@@ -1,17 +1,14 @@
+function indexOfIgnoreCase(s1, s2) {
+  // If s2 is an empty string, return 0
+  if (s2 === "") return 0;
 
+  // If s1 is empty and s2 is not, return -1
+  if (s1 === "") return -1;
 
+  // Convert both strings to lowercase for case-insensitive comparison
+  const lowerS1 = s1.toLowerCase();
+  const lowerS2 = s2.toLowerCase();
 
-
- function indexOfIgnoreCase(str, subStr) {
-      if (subStr === "") return 0;
-      if (str === "") return -1;
-      return str.toLowerCase().indexOf(subStr.toLowerCase());
-    }
-
-    // Prompt the user for input
-    const str = prompt("Enter the main string:");
-    const subStr = prompt("Enter the substring to search:");
-
-    // Call the function and show result
-    const result = indexOfIgnoreCase(str, subStr);
-    alert("Index of first occurrence (case-insensitive): " + result);
+  // Use indexOf to find the first occurrence
+  return lowerS1.indexOf(lowerS2);
+}
